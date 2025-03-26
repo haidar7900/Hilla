@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root";  // اسم المستخدم لقاعدة البيانات
-$pass = "";  // كلمة المرور (اتركها فارغة إذا كنت تعمل على Localhost)
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "babel_db";
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
+    die("فشل الاتصال: " . $conn->connect_error);
 }
 ?>
